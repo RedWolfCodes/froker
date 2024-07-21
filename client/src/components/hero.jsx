@@ -10,10 +10,17 @@ const Hero = () => {
     const fetchblog = async () => {
       const response = await getTop3();
       console.log("Data from getTOP3: ", response.blogs);
-      setBlog(response.blogs);
+      
+      const formattedBlogs = response.blogs.map(blog => {
+        const date = new Date(blog.date);
+        const formattedDate = `${date.getDate()} ${date.toLocaleString('default', { month: 'short' })} ${date.getFullYear()}`;
+        return { ...blog, date: formattedDate };
+      });
+
+      setBlog(formattedBlogs);
     };
 
-    fetchblog();
+    fetchblog()
   }, []);
 
   return (
