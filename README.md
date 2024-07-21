@@ -1,3 +1,83 @@
+
+# Froker-Blogs
+
+Assignment given by Froker for tech profile - 2025. This is a clone of the Blog page of the website of Froker.
+
+## Technologies used
+- Frontend: React, HTML5, CSS3, Javascript, Tailwind CSS
+- Backend: Node.js, Express.js
+- Deployment: Vercel, Render
+
+## Architecture
+ ![architecture](https://i.postimg.cc/fb0cGx8g/diagram-export-7-21-2024-10-48-12-AM.png)
+
+## Screenshot
+ ![ss1](https://i.postimg.cc/T2HPDZdg/Screenshot-2024-07-21-105130.png)
+ ![ss2](https://i.postimg.cc/ZYgTRpHL/Screenshot-2024-07-21-105141.png)
+ ![ss3](https://i.postimg.cc/W1cTmVQF/Screenshot-2024-07-21-105156.png)
+ ![ss4](https://i.postimg.cc/N0gtV4GQ/Screenshot-2024-07-21-105241.png)
+ ![ss5](https://i.postimg.cc/qRqTBvCY/Screenshot-2024-07-21-105250.png)
+ 
+
+
+## Run the program
+
+It is deployed on [froker-main.vercel.app](froker-main.vercel.app).
+
+
+
+
+## API Reference
+
+#### Get all blogs
+
+```http
+  GET /blogs
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| NULL      |          | Fetches all blogs          |
+
+#### Get blogs by id
+
+```http
+  GET /blog/:id
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `string` | **Required**. Id of item to fetch |
+
+#### Get Top 3 posts
+```http
+    GET /blogs/hero/top3
+```
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| NULL      |          | Fetches top 3 blogs as per likes  |
+
+#### Add a like by id
+
+```http
+  POST /blog/:id/like
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `string` | **Required**. Id of item to add   |
+
+#### Delete a like by id
+
+```http
+  DELETE /blog/:id/like
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `string` | **Required**. Id of item to delete|
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
