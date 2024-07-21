@@ -2,7 +2,7 @@ import { apiConnector } from "../apiConnect";
 import { BASE_URL } from "../api";
 export const addLike = async (id) => {
     try {
-        const response = await apiConnector("POST", `${BASE_URL}/api/v1/blogs/${id}/like`);
+        const response = await apiConnector("POST", `${BASE_URL}/blogs/${id}/like`);
         console.log("Data from addLike: ", response)
 
         if(!response?.data?.success) {
@@ -24,7 +24,7 @@ export const addLike = async (id) => {
 
 export const deleteLike = async (id) => {
     try {
-        const response = await apiConnector("DELETE", `${BASE_URL}/api/v1/blogs/${id}/like`);
+        const response = await apiConnector("DELETE", `${BASE_URL}/blogs/${id}/like`);
         console.log("Data from deleteLike: ", response)
 
         if(!response?.data?.success) {
