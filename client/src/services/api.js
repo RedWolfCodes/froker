@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:4000/api/v1';
+const BASE_URL = 'https://froker-7e6v.onrender.com/api/v1';
 
 export const blogEndpoints = {
     GETTOP3BLOGS_API: BASE_URL + '/blogs/hero/top3',

@@ -18,6 +18,7 @@ const Hero = () => {
 
   return (
     <>
+      {blog.length === 0 && <h1>Loading...</h1>}
       {blog.length > 0 && (
         <div className="flex flex-col items-center mt-20 space-y-6">
           <h1 className="text-[2rem]">

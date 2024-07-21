@@ -49,6 +49,7 @@ const Posts = () => {
     <div className='xl:mx-60 lg:mx-40 mx-12 space-y-16'>
       <h1 className='text-[2.25rem] mt-16 mb-8'>Recent Posts</h1>
       <div className='lg:grid grid-rows-3 grid-cols-3 gap-4 flex flex-col lg:space-y-0 space-y-4'>
+        {blogsPerPage.length === 0 && <h1>Loading...</h1>}
         {blogsPerPage.length > 0 && blogsPerPage.map((item) => (
           <Link hrefLang="#" to={`/blog/${item._id}`} key={item.id} className='w-full cursor-pointer flex flex-col items-center space-y-4'>
             <img src={"https://res.cloudinary.com/de7hlbfce/image/upload/f_auto,q_auto/v1/Froker/ytwssb6sxltbqktsoier"} alt={item.title} className='rounded-3xl object-cover h-[40vh] w-full' />
