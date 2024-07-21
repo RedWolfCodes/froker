@@ -37,7 +37,7 @@ const Blog = () => {
             <div className='flex flex-col space-y-2'>
                 <h1 className=''>Blog {`>`} Title: {blog.title} </h1>
                 <div className='relative'>
-                    <img src={"https://res.cloudinary.com/de7hlbfce/image/upload/f_auto,q_auto/v1/Froker/ytwssb6sxltbqktsoier"} alt="" className='rounded-3xl lg:h-auto h-96 object-cover' />
+                    <img src={"https://res.cloudinary.com/de7hlbfce/image/upload/f_auto,q_auto/v1/Froker/ytwssb6sxltbqktsoier"} alt="" className='rounded-3xl w-full lg:h-auto h-96 object-cover' />
                     <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-tr from-black/80 to-transparent rounded-3xl'></div>
                     <p className='absolute bottom-0 left-3 text-white font-bold lg:text-[2rem] p-2 uppercase w-[80%]'>Title: {blog.title}</p>
                 </div>
