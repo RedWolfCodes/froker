@@ -1,8 +1,9 @@
 import { apiConnector } from "../apiConnect";
+import { BASE_URL } from "../api";
 
 export const getPostById = async (id) => {
     try {
-        const response = await apiConnector("GET", `http://localhost:4000/api/v1/blogs/${id}`);
+        const response = await apiConnector("GET", `${BASE_URL}/api/v1/blogs/${id}`);
         console.log("Data from getPostByid: ", response)
 
         if(!response?.data?.success) {
